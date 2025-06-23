@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "love_yue_web": {
+    "love-yue-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss",
+          "style": "less",
           "skipTests": true
         },
         "@schematics/angular:class": {
@@ -39,28 +39,23 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/love_yue_web",
+            "outputPath": "dist/love-yue-web",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
+            "inlineStyleLanguage": "less",
             "assets": [
               {
                 "glob": "**/*",
                 "input": "public"
-              },
-              {
-                "glob": "**/*",
-                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
-                "output": "/assets/"
               }
             ],
             "styles": [
-              "src/theme.less",
-              "src/styles.scss"
+              "src/styles.less",
+              "node_modules/ng-devui/devui.min.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -97,10 +92,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "love_yue_web:build:production"
+              "buildTarget": "love-yue-web:build:production"
             },
             "development": {
-              "buildTarget": "love_yue_web:build:development"
+              "buildTarget": "love-yue-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -116,7 +111,7 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
+            "inlineStyleLanguage": "less",
             "assets": [
               {
                 "glob": "**/*",
@@ -124,12 +119,16 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.less",
+              "node_modules/ng-devui/devui.min.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "badaabca-d266-4617-9ad8-edade491a19a"
   }
 }

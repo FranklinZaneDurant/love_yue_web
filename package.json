@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:love_yue_web": "node dist/love_yue_web/server/server.mjs"
+    "serve:ssr:love-yue-web": "node dist/love-yue-web/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -21,8 +21,9 @@
     "@angular/platform-server": "^18.2.0",
     "@angular/router": "^18.2.0",
     "@angular/ssr": "^18.2.20",
+    "@devui-design/icons": "^1.4.0",
     "express": "^4.18.2",
-    "ng-zorro-antd": "^18.2.1",
+    "ng-devui": "^18.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
