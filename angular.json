@@ -7,7 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "less",
+          "style": "scss",
           "skipTests": true
         },
         "@schematics/angular:class": {
@@ -46,16 +46,12 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "less",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
+            "inlineStyleLanguage": "scss",
+            "assets": ["src/assets"],
             "styles": [
-              "src/styles.less",
-              "node_modules/ng-devui/devui.min.css"
+              "src/styles.scss",
+              "node_modules/ng-devui/devui.min.css",
+              "node_modules/@devui-design/icons/icomoon/devui-icon.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -111,7 +107,7 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "less",
+            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
@@ -119,7 +115,7 @@
               }
             ],
             "styles": [
-              "src/styles.less",
+              "src/styles.scss",
               "node_modules/ng-devui/devui.min.css"
             ],
             "scripts": []
